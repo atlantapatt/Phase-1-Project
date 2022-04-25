@@ -55,10 +55,15 @@ function randomAPI() {
     // event.preventDefault()
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(response => response.json())
-        .then(response => [response].map(meal => {
-             const html = response.meal
+        .then(data => [data].map(meals => {
+            //  const html = data.meal 
+            const html = `<p>
+            Meal: ${meals.meals[0].strMeal}
+            
+            </p>`
              document.querySelector('#output').insertAdjacentHTML('afterbegin', html)
-             return `<p>Meal: ${meal.strMeal}</p>`
+             console.log(meals.meals[0].strMeal)
+            
     }))
     
     }
