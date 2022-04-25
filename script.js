@@ -3,6 +3,9 @@ const pencil = document.getElementById('pencil')
 const allItems = document.getElementById('allItems')
 const userInput = document.getElementById('userInput')
 const deletion = document.getElementById('deletion')
+const apiButton = document.getElementById("apiButton")
+const userSearch = document.getElementById('userSearch')
+const searchGlyph = document.getElementById('magGlass')
 
 pencil.addEventListener('click', function(){
     addItem()
@@ -27,3 +30,17 @@ function addItem(){
     allItems.insertAdjacentElement('beforeend', h2)
     userInput.value = ''
 }
+
+userSearch.addEventListener('submit', searchFunc())
+searchGlyph.addEventListener('click', searchFunc())
+
+function searchFunc(event) {
+    
+    // event.preventDefault()
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${userSearch.value}`)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    userSearch.value = ''
+}
+
+apiButton.addEventListener('click')
