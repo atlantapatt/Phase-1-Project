@@ -51,16 +51,23 @@ apiButton.addEventListener('click', function() {
     randomAPI()
 })
 
-function randomAPI(event) {
+function randomAPI() {
     // event.preventDefault()
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-    .then(response => response.json())
-    .then(data => fetchedData(data.meals))
+        .then(response => response.json())
+        .then(response => [response].map(meal => {
+             const html = response.meal
+             document.querySelector('#output').insertAdjacentHTML('afterbegin', html)
+             return `<p>Meal: ${meal.strMeal}</p>`
+    }))
     
-}
+    }
 
-function fetchedData(apiData) {
-    const apih2 = document.createElement('h2')
-    apih2.innerHTML = apiData
-    console.log(apiData)
-}
+// function fetchedData(apiData) {
+//     const APIdata = apiData.meals.map(meal => {
+//         return `<p>meal' + ${meal.strMeal}</p>`
+//     })
+    // const apih2 = document.createElement('h2')
+    // apih2.innerHTML = apiData
+    // console.log(apiData)
+// }
