@@ -3,7 +3,7 @@ const pencil = document.getElementById('pencil')
 const allItems = document.getElementById('allItems')
 const userInput = document.getElementById('userInput')
 const deletion = document.getElementById('deletion')
-const apiButton = document.getElementById("apiButton")
+const apiButton = document.getElementById("API button")
 const userSearch = document.getElementById('userSearch')
 const searchGlyph = document.getElementById('magGlass')
 
@@ -31,8 +31,12 @@ function addItem(){
     userInput.value = ''
 }
 
-userSearch.addEventListener('submit', searchFunc())
-searchGlyph.addEventListener('click', searchFunc())
+userSearch.addEventListener('submit', function() {
+    searchFunc()
+})
+searchGlyph.addEventListener('click', function() {
+    searchFunc()
+})
 
 function searchFunc(event) {
     
@@ -43,4 +47,20 @@ function searchFunc(event) {
     userSearch.value = ''
 }
 
-apiButton.addEventListener('click')
+apiButton.addEventListener('click', function() {
+    randomAPI()
+})
+
+function randomAPI(event) {
+    // event.preventDefault()
+    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    .then(response => response.json())
+    .then(data => fetchedData(data.meals))
+    
+}
+
+function fetchedData(apiData) {
+    const apih2 = document.createElement('h2')
+    apih2.innerHTML = apiData
+    console.log(apiData)
+}
