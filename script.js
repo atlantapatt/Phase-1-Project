@@ -46,16 +46,16 @@ searchGlyph.addEventListener('click', function() {
     searchFunc()
 })
 
-function searchFunc(event) {
+function searchFunc() {
     
     // event.preventDefault()
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${userSearch.value}`)
     .then(response => response.json())
-    .then(response => console.log(response))
-    userSearch.value = ''
+    .then(data => console.log(data))
 }
 
-apiButton.addEventListener('click', function() {
+apiButton.addEventListener('click', function(e) {
+    e.preventDefault()
     document.getElementById('output').innerHTML = ""
     randomAPI()
     
@@ -96,13 +96,13 @@ function randomAPI() {
             ${mealsArray.strMeasure19} ${mealsArray.strIngredient19} <br>
             ${mealsArray.strMeasure20} ${mealsArray.strIngredient20} <br>
             </p>
+            <h3 text - align="left">
+            Instructions
+            </h3>
             <p text-align="left">
             ${mealsArray.strInstructions}
             </p>
             `
-            function iterateAPI(array) {
-    
-            }
 
             // console.log(iterateAPI(mealsArray))
             console.log(mealsArray)
