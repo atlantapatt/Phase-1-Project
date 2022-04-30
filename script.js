@@ -39,19 +39,61 @@ function addItem(){
     userInput.value = ''
 }
 
-userSearch.addEventListener('submit', function() {
-    searchFunc()
+userSearch.addEventListener('keydown', function(event) {
+    if(event.key === 'Enter') {
+        document.getElementById('output').innerHTML = ""
+        searchFunc()
+    }
 })
 searchGlyph.addEventListener('click', function() {
+    document.getElementById('output').innerHTML = ""
     searchFunc()
 })
 
 function searchFunc() {
     
-    // event.preventDefault()
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${userSearch.value}`)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => [data].map(meals => {
+        const mealsArray = meals.meals[0]
+        console.log(mealsArray)
+        const html = `
+        <h2>
+        Meal: ${meals.meals[0].strMeal}
+        </h2>
+        <img src = ${meals.meals[0].strMealThumb} width ="200" height="200"/>
+        <p>
+        ${mealsArray.strMeasure1} ${mealsArray.strIngredient1} <br>
+        ${mealsArray.strMeasure2} ${mealsArray.strIngredient2}  <br>
+        ${mealsArray.strMeasure3} ${mealsArray.strIngredient3} <br>
+        ${mealsArray.strMeasure4} ${mealsArray.strIngredient4} <br>
+        ${mealsArray.strMeasure5} ${mealsArray.strIngredient5} <br>
+        ${mealsArray.strMeasure6} ${mealsArray.strIngredient6} <br>
+        ${mealsArray.strMeasure7} ${mealsArray.strIngredient7} <br>
+        ${mealsArray.strMeasure8} ${mealsArray.strIngredient8} <br>
+        ${mealsArray.strMeasure9} ${mealsArray.strIngredient9} <br>
+        ${mealsArray.strMeasure10} ${mealsArray.strIngredient10} <br>
+        ${mealsArray.strMeasure11} ${mealsArray.strIngredient11} <br>
+        ${mealsArray.strMeasure12} ${mealsArray.strIngredient12}  <br>
+        ${mealsArray.strMeasure13} ${mealsArray.strIngredient13} <br>
+        ${mealsArray.strMeasure14} ${mealsArray.strIngredient14} <br>
+        ${mealsArray.strMeasure15} ${mealsArray.strIngredient15} <br>
+        ${mealsArray.strMeasure16} ${mealsArray.strIngredient16} <br>
+        ${mealsArray.strMeasure17} ${mealsArray.strIngredient17} <br>
+        ${mealsArray.strMeasure18} ${mealsArray.strIngredient18} <br>
+        ${mealsArray.strMeasure19} ${mealsArray.strIngredient19} <br>
+        ${mealsArray.strMeasure20} ${mealsArray.strIngredient20} <br>
+        </p>
+        <h3 text - align="left">
+        Instructions:
+        </h3>
+        <p text-align="left">
+        ${mealsArray.strInstructions}
+        </p>
+        `
+        document.querySelector('#output').insertAdjacentHTML('afterbegin', html)
+
+    }))
 }
 
 apiButton.addEventListener('click', function(e) {
@@ -62,7 +104,6 @@ apiButton.addEventListener('click', function(e) {
 })
 
 function randomAPI() {
-    // event.preventDefault()
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(response => response.json())
         .then(data => [data].map(meals => {
@@ -97,7 +138,7 @@ function randomAPI() {
             ${mealsArray.strMeasure20} ${mealsArray.strIngredient20} <br>
             </p>
             <h3 text - align="left">
-            Instructions
+            Instructions:
             </h3>
             <p text-align="left">
             ${mealsArray.strInstructions}
