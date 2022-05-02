@@ -5,5 +5,14 @@ Grocery List is a single page application that allows you to add and cross off i
 # How to Use Grocery List
 1. Click the input box at the top to start typing items.
 2. Press enter or click the pencil to the left to add the item to your grocery list.
-3. Once items are added, you can click said item to cross it off the list.
-4. Once finished, you can click the x to the right of the input box to clear your list and start over.
+
+![GL AddItems](https://user-images.githubusercontent.com/99867479/166334474-81e57842-558d-4c64-aa3a-7aa45f736a56.gif)
+
+4. Once items are added, you can click said item to cross it off the list.
+
+![GL Cross Off Items](https://user-images.githubusercontent.com/99867479/166334497-dbdf5449-75a6-4a3d-ad3b-e562e098b39a.gif)
+
+6. Once finished, you can click the x to the right of the input box to clear your list and start over.
+
+![GL Clear Items](https://user-images.githubusercontent.com/99867479/166334521-375e28c6-19cb-4418-9ac9-56a5560e11ef.gif)
+
