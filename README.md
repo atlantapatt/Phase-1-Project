@@ -1,5 +1,5 @@
 # Grocery List and Meal Idea Generator
-Grocery List is a single page application that allows you to add and cross off items for a grocery list using JavaScript, HTML, and CSS. 
+Grocery List is a single page application that allows you to add and cross off items for a grocery list. You can also use the Meal Idea Generator to randomly give you a recipie idea or search up a recipie.
 
 
 # How to Use Grocery List
@@ -15,4 +15,12 @@ Grocery List is a single page application that allows you to add and cross off i
 6. Once finished, you can click the x to the right of the input box to clear your list and start over.
 
 ![GL Clear Items](https://user-images.githubusercontent.com/99867479/166334521-375e28c6-19cb-4418-9ac9-56a5560e11ef.gif)
+
+7. Click on the "Click Here For Ideas" button to randomly generate a recipie and its corresponding ingredient and instructions.
+
+![GL Random Meal](https://user-images.githubusercontent.com/99867479/166339289-08fb4290-1e02-4bc3-93a0-23834134193e.gif)
+
+8. Or, you can click the input box below the idea button to search through the database of recipies by typing keywords and pressing enter or clicking the search icon.
+
+![GL Search Meal](https://user-images.githubusercontent.com/99867479/166339384-3bf06f0b-997d-497e-82f2-d7b8166fadf8.gif)
 
