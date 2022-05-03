@@ -18,7 +18,7 @@ Grocery List is a single page application that allows you to add and cross off i
 
 5. Click on the "Click Here For Ideas" button to randomly generate a recipie and its corresponding ingredient and instructions.
 
-![GL Random Meal](https://user-images.githubusercontent.com/99867479/166339289-08fb4290-1e02-4bc3-93a0-23834134193e.gif)
+![GL Random meals](https://user-images.githubusercontent.com/99867479/166390905-80e4e750-1401-4fd4-9e0b-035e231add6f.gif)
 
 6. Or, you can click the input box below the idea button to search through the database of recipies by typing keywords and pressing enter or clicking the search icon.
 
