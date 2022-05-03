@@ -1,5 +1,5 @@
 # Grocery List and Meal Idea Generator
-Grocery List is a single page application that allows you to add and cross off items for a grocery list. You can also use the Meal Idea Generator to randomly give you a recipie idea or search up a recipie.
+Grocery List is a single page application that allows you to add and cross off items for a grocery list. You can also use the Meal Idea Generator to randomly give you a recipie idea or search up a recipie by utilizing the [The Meal Database](https://www.themealdb.com/).
 
 
 # How to Use Grocery List
@@ -24,3 +24,8 @@ Grocery List is a single page application that allows you to add and cross off i
 
 ![GL Search Meal](https://user-images.githubusercontent.com/99867479/166339384-3bf06f0b-997d-497e-82f2-d7b8166fadf8.gif)
 
+# Built With
+- Javascript
+- HTML
+- CSS
+- [The Meal Database](https://www.themealdb.com/)
