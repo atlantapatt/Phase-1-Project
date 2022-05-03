@@ -6,7 +6,8 @@ const deletion = document.getElementById('deletion')
 const apiButton = document.getElementById("API button")
 const userSearch = document.getElementById('userSearch')
 const searchGlyph = document.getElementById('magGlass')
-
+const listh2 = allItems.getElementsByTagName('h2')
+const h2Items = document.getElementById('items')
 // function iterateAPI(array) {
 //     for (i=0; i< array.length; i++) {
 //         if (meals.meals[0].strMeasure[i]) {
@@ -28,8 +29,24 @@ userInput.addEventListener('keydown', function(event){
         addItem()
 })
 
+apiButton.addEventListener('mouseover', function(){
+    colorChange()
+})
+apiButton.addEventListener('mouseout', function(){
+    colorChangeBack()
+})
+function colorChange(){
+    apiButton.style.color = 'olive'
+}
+
+function colorChangeBack(){
+    apiButton.style.color = 'white'
+}
+
+
 function addItem(){
     const h2 = document.createElement('h2')
+    h2.setAttribute('id', 'items')
     h2.innerHTML = '- ' + userInput.value
     
     h2.addEventListener('click', function(){
