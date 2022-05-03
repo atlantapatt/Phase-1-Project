@@ -8,13 +8,7 @@ const userSearch = document.getElementById('userSearch')
 const searchGlyph = document.getElementById('magGlass')
 const listh2 = allItems.getElementsByTagName('h2')
 const h2Items = document.getElementById('items')
-// function iterateAPI(array) {
-//     for (i=0; i< array.length; i++) {
-//         if (meals.meals[0].strMeasure[i]) {
-//             return `${meals.meals[0].strMeasurei} of ${meals.meals[0].strIngredienti}`
-//         }
-//     }
-// }
+
 
 pencil.addEventListener('click', function(){
     addItem()
@@ -123,8 +117,7 @@ apiButton.addEventListener('click', function(e) {
 function randomAPI() {
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(response => response.json())
-        .then(data => [data].map(meals => {
-            //  const html = data.meal 
+        .then(data => [data].map(meals => { 
             const mealsArray = meals.meals[0]
             
             const html = `
@@ -162,22 +155,12 @@ function randomAPI() {
             </p>
             `
 
-            // console.log(iterateAPI(mealsArray))
             console.log(mealsArray)
-            console.log()
 
              document.querySelector('#output').insertAdjacentHTML('afterbegin', html)
-            //  console.log(meals.meals[0])
             
     }))
     
     }
 
-// function fetchedData(apiData) {
-//     const APIdata = apiData.meals.map(meal => {
-//         return `<p>meal' + ${meal.strMeal}</p>`
-//     })
-    // const apih2 = document.createElement('h2')
-    // apih2.innerHTML = apiData
-    // console.log(apiData)
-// }
+
