@@ -72,7 +72,7 @@ function searchFunc() {
         <h2>
         Meal: ${meals.meals[0].strMeal}
         </h2>
-        <img src = ${meals.meals[0].strMealThumb} width ="200" height="200"/>
+        <img src = ${mealsArray.strMealThumb} width ="200" height="200"/>
         <p>
         ${mealsArray.strMeasure1} ${mealsArray.strIngredient1} <br>
         ${mealsArray.strMeasure2} ${mealsArray.strIngredient2}  <br>
