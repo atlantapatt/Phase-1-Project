@@ -1,7 +1,7 @@
 # Grocery List and Meal Idea Generator
 
 ## Project Basis
-A big problem in my own life is I'll come back from the grocery store with items that do not go together in a meal or I will spend hours trying to search for what to make. This app is centered around combining a grocery list to track the items you need to buy as well as evading choice paralysis by randomly generating recipies. 
+A big problem in my own life is that I'll come back from the grocery store with items that do not go together in a meal or I will spend hours trying to search for what to make. This app is centered around combining a grocery list to track the items you need to buy as well as evading choice paralysis by randomly generating recipies. 
 
 ## Project Use
 Grocery List is a single page application that allows you to add and cross off items for a grocery list. You can also use the Meal Idea Generator to randomly give you a recipie idea or search up a recipie by utilizing the [The Meal Database](https://www.themealdb.com/).
